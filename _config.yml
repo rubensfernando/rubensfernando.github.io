@@ -1,0 +1,26 @@
+# Site settings
+title: Rubens Fernando
+tagline: Designer e infografista
+email: ola@rubensfernando.com
+description: > # this means to ignore newlines until "baseurl:"
+  Sou designer e desenvolvedor no jornal Folha de S.Paulo, na editoria de Arte, desenvolvendo infográficos e outras histórias visuais.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://rubensfernando.com" # the base hostname & protocol for your site
+twitter_username: rubensfernando
+github_username:  rubensfernando
+linkedin_username:  rubensfernando
+lastfm_username: rubfernando
+
+# Build settings
+markdown: kramdown
+
+exclude: [
+  'README.md',
+  'package.json',
+  'Gruntfile.js',
+  'node_modules',
+  'Gemfile*',
+  'assets/sass',
+  'bower.json',
+  'tasks'
+]
