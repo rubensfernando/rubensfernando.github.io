@@ -1,0 +1,361 @@
+@lost flexbox flex;
+
+color-pickled-bluewood = #2C3E50;
+color-hippie-blue = #4CA1AF;
+color-deep-blue = #0B2737;
+
+color-primary = color-pickled-bluewood;
+color-second = color-hippie-blue;
+color-nav = color-deep-blue;
+
+/* http//meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin 0
+  padding 0
+  border 0
+  font-size 100%
+  font inherit
+  vertical-align baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+  display block
+
+
+body
+  line-height 1
+
+ol, ul
+  list-style none
+
+blockquote, q
+  quotes none
+
+blockquotebefore, blockquoteafter,
+qbefore, qafter
+  content ''
+  content none
+
+table
+  border-collapse collapse
+  border-spacing 0
+
+
+*
+  box-sizing: border-box
+
+
+html
+  font-size 1em
+
+body
+  background-color: white
+  font-family: 'Fira Sans', sans-serif
+  font-weight: 300
+  line-height: 1.45
+  color #333
+
+p
+  margin-bottom 1.3em
+
+h1, h2, h3, h4
+  margin 1.414em 0 0.5em
+  font-weight inherit
+  line-height 1.2
+
+h1
+  margin-top 0
+  font-size 3.157em
+
+h2
+  font-size 2.369em
+
+h3
+  font-size 1.777em
+
+h4
+  font-size 1.333em
+
+small, .font_small
+  font-size 0.75em
+
+a
+  text-decoration: none
+  color: color-second
+
+.col-1-1
+  lost-column: 1/1
+
+.col-1-3
+  lost-column: 1/3
+  +mobile()
+    lost-column: 1/1
+
+.col-2-3
+  lost-column: 2/3
+  +mobile()
+    lost-column: 1/1
+
+input,
+textarea
+  display: block
+  width: 100%
+  border: 1px solid color-primary
+  border-radius: 5px
+  padding: 3px 6px
+
+button
+  padding: 3px 6px
+  border: none
+  background: color-primary
+  color: color-second
+  text-align: center
+
+
+.container
+  padding: 0 10px
+  lost-utility: clearfix
+  lost-center: 1320px
+
+.header
+  background: color-nav
+  background-blend-mode: multiply
+  padding: 10px 0
+  position: fixed
+  z-index: 1000
+  width: 100%
+  &__container
+    color: white
+
+.row
+  lost-utility: clearfix
+  lost-center: 100%
+  width: 100%
+
+.navbar-brand
+  color: white
+  font-size: 20px
+  span
+    font-weight: 600
+
+.hero
+  background color-primary
+  height: 550px
+  display: flex
+  flex-direction: column
+  +mobile()
+    height: 100vh
+  &__container
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 100%
+  .aligner
+    width: 100%
+
+.headline
+  color: white
+  font-weight: 600
+  margin-bottom: 0
+
+.subHeadline
+  margin-top: 0
+  color: color-second
+
+@import '_sidebar.styl'
+
+.image-responsive
+  width: 100%
+
+.content
+  padding: 2em 0
+
+.blocks
+  lost-column: 1/1
+
+.block
+  position: relative
+  padding: 2em
+  border-bottom: 1px solid color-second
+  &:before
+    transition: opacity 0.5s ease
+    bottom: 0
+    content: ''
+    display: block
+    height: 100%
+    left: 0
+    opacity: 0.85
+    position: absolute
+    width: 100%
+    z-index: 2
+  &:hover
+    &:before
+      opacity: 0.5
+  &__header
+    position: absolute
+    z-index: 4
+    top: 50%
+    transform: translateY(-50%)
+    &_title
+      font-size: 32px
+      font-weight: 600
+      margin: 0
+      color: color-second
+    &_subtitle
+      margin: 0
+      font-size: 22px
+      font-weight: light
+      color: color-primary
+    &_link
+      border: 0
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+      z-index: 4
+
+.work,
+.career
+  lost-column: 1/1
+  height: 320px
+.work
+  .block__header_title
+    color: white
+  &:before
+    background-color: #4CA1AF
+
+.title
+  font-weight: 600
+  font-size: 32px
+  color: color-second
+  &__name
+    color: color-primary
+
+.footer
+  padding-bottom: 110px
+  .contact-form
+    lost-column: 1/2
+    +mobile()
+      lost-column: 1/1
+    .field
+      margin-bottom: 1em
+      &__name,
+      &__email
+        lost-column: 1/2
+        +tablet()
+          lost-column: 1/1
+      &__subject
+      &__message
+        lost-column: 1/1
+
+// .social
+//   &.icon
+//     .fa
+//       color: white
+
+.icon
+  position relative
+  text-align center
+  width 0px
+  height 0px
+  padding 20px
+  border-top-right-radius 20px
+  border-top-left-radius 20px
+  border-bottom-right-radius 20px
+  border-bottom-left-radius 20px
+  color #FFFFFF
+  i
+    font-size 20px
+    position absolute
+    left 9px
+    top 10px
+  &.social
+    float left
+    margin 0 5px 0 0
+    cursor pointer
+    background color-second
+    color #fff
+    transition 0.5s
+    &:hover
+      opacity: 0.7
+      transition 0.5s
+    &.fb
+      i
+        left 13px
+        top 10px
+    &.tw
+      i
+        left 11px
+    &.in
+      i
+        left 11px
+.project
+  lost-utility: clearfix
+  padding: 50px 0
+  *
+    transition: all 0.5s ease
+  header
+    padding-top: 1.414em
+    lost-column: 1/3
+    float: left
+    +mobile()
+      lost-column: 1/1
+    +desktop()
+      opacity: 0.7
+    h2
+      margin 0.5em 0
+      font-weight: 600
+      color: color-primary
+  .footer-links
+    margin: 20px 0
+    a
+      margin: 20px 0
+  .thumb
+    lost-column: 2/3
+    float: right
+    +mobile()
+      lost-column: 1/1
+    +desktop()
+      opacity: 0.3
+  &:hover
+    .thumb,
+    header
+      +desktop()
+        opacity: 1
+  .tool
+    strong
+      text-transform: uppercase
+      font-weight: bold
+      font-size: .8em
+
+strong.item
+  text-transform: uppercase
+  font-weight: bold
+  font-size: .8em
+
+.about
+  h3, h4, h5
+    font-weight: 600
+    color: color-pickled-bluewood
+
+  h4
+    color: color-hippie-blue

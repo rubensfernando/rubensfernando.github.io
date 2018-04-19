@@ -1,0 +1,4 @@
+url: "" # blank in development
+
+development: true # optional, you can use in liquid tag conditionals
+disqus_shortname: 'your-shortname-dev' # ignore this if not using Disqus
